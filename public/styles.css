@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-container .login-box{
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 400px;
+}
+
+.login-container .login-box h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #02af36;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.login-container .login-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .login-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.login-container .login-box button{
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #02af36;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container .login-box button:hover{
+    background-color: #028c2b;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #02af36;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    background-color: #374151;
+}
+
+.main{
+    margin-left: 240px;
+    padding: 30px;
+    width: calc(100% - 240px);
+}
+
+.main h1{
+    margin-bottom: 30px;
+}
+
+.main .cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main .cards .card{
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.main .cards .card h2{
+    color: #02af36;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.main-page{
+    margin-left: 240px;
+    padding: 30px;
+    width: calc(100% - 240px);
+}
+
+.main-page h1{
+    margin-bottom: 20px;
+}
+
+.main-page > a{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #02af36;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.main-page > a:hover{
+    background-color: #028c2b;
+}
+
+.main-page table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.main-page th,
+.main-page td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.main-page th{
+    background-color: #02af36;
+    color: white;
+}
+
+.main-page td a{
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+    margin: 0 5px;
+}
+
+.main-page td a:first-child{
+    background-color: #007bff;
+}
+
+.main-page td a:last-child{
+    background-color: #dc3545;
+}
+
+.form-box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.edit-form{
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-box form,
+.edit-form form{
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.form-box h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-box form input,
+.edit-form form input,
+.form-box form select{
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-box form button,
+.edit-form form button{
+    width: 100%;
+    padding: 12px;
+    background-color: #02af36;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-box form button:hover,
+.edit-form form button:hover{
+    background-color: #028c2b;
+}
+
+.total-in-card{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.total-in-card h3{
+    color: #02af36;
+    margin-bottom: 10px;
+}
+
+.total-in-card h1{
+    color: #02af36;
+    font-size: 40px;
+    margin: 0;
+}
+
+.visit-result{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    width: 400px;
+}
+
+.visit-result h2{
+    color: #02af36;
+    margin-bottom: 15px;
+}
+
+.visit-result h3{
+    color: red;
+}
+
+.visit-result p{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
+
+.visit-result{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    width: 400px;
+    transition: opacity 0.5s ease;
+}
+
+.search-form{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input{
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.search-form button{
+    padding: 10px 15px;
+    background-color: #02af36;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-form button:hover{
+    background-color: #028c2b;
+}

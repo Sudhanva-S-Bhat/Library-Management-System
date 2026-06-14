@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowed Books</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Library</h2>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/books">Books</a>
+        <a href="/borrowed-books">Borrowed Books</a>
+        <a href="/students">Students</a>
+        <a href="/library-visits">Library Visits</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="main-page">
+        <h1>Borrowed Books</h1>
+        <form action="/borrowed-books" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Search by USN, Student or Book" value="<%= search || '' %>">
+            <button type="submit">
+                Search
+            </button>
+        </form>
+        <a href="/borrowed-books/add">Issue New Book</a>
+        <table>
+            <tr>
+                <th>Borrow Id</th>
+                <th>USN</th>
+                <th>Student Name</th>
+                <th>Book Title</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <% borrowedBooks.forEach(book => { %>
+                <tr>
+                    <td><%= book.id %></td>
+                    <td><%= book.usn %></td>
+                    <td><%= book.name %></td>
+                    <td><%= book.title %></td>
+                    <td><%= book.borrow_date %></td>
+                    <td><%= book.return_date %></td>
+                    <td><%= book.status %></td>
+                    <td>
+                        <% if(book.status === 'Borrowed'){ %>
+                            <a href="/borrowed-books/return/<%= book.id %>">Return</a>
+                        <% } else { %> Returned <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+</html>
